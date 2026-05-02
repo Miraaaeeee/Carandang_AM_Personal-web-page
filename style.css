@@ -1,0 +1,288 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* BASE */
+body{
+    background:#ffffff;
+    color:#111;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+    transition:0.3s;
+}
+
+/* DARK MODE */
+body.dark{
+    background:#0f0f14;
+    color:white;
+}
+
+/* TOGGLE */
+#themeToggle{
+    position:fixed;
+    top:20px;
+    right:20px;
+    border:none;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+    background:#eee;
+}
+
+/* CONTAINER */
+.container{
+    max-width:900px;
+    width:100%;
+    text-align:center;
+}
+
+/* PROFILE */
+.profile img{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+    border:4px solid #fff;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.1),
+        0 0 0 4px rgba(123,63,228,0.1);
+
+    transition:0.4s ease;
+}
+
+.profile img:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.15),
+        0 0 20px rgba(123,63,228,0.4);
+}
+
+/* NAV */
+.nav{
+    margin:25px 0;
+}
+
+.nav a{
+    margin:0 12px;
+    text-decoration:none;
+    color:inherit;
+    font-weight:500;
+    position:relative;
+}
+
+.nav a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#7b3fe4;
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    transition:0.3s;
+}
+
+.nav a:hover::after{
+    width:100%;
+}
+
+/* CARDS */
+.card{
+    background:#fff;
+    padding:25px;
+    margin:15px 0;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+body.dark .card{
+    background:#1a1a22;
+}
+
+/* HEADINGS */
+h2{
+    margin-bottom:10px;
+    color:#7b3fe4;
+}
+
+h3{
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+.btn{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#7b3fe4;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#5f2ecb;
+}
+
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    margin:5px;
+    padding:8px 15px;
+    border-radius:20px;
+    background:#f3edff;
+    color:#7b3fe4;
+    font-size:14px;
+}
+
+/* SOCIALS */
+.socials a{
+    margin:10px;
+    font-size:20px;
+    color:#7b3fe4;
+}
+
+/* ================= TIMELINE ================= */
+.timeline{
+    position:relative;
+    margin-top:15px;
+    padding-left:25px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:6px;
+    top:0;
+    width:3px;
+    height:100%;
+    background:#7b3fe4;
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:35px;
+    padding-left:35px;
+}
+
+.timeline-item .circle{
+    position:absolute;
+    left:-6px;
+    top:8px;
+    width:12px;
+    height:12px;
+    background:#7b3fe4;
+    border-radius:50%;
+}
+
+.timeline-item .content{
+    background:#f9f7ff;
+    padding:15px 18px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    margin-left:5px;
+    transition:0.3s;
+}
+
+.timeline-item .content:hover{
+    transform:translateX(5px);
+}
+
+body.dark .timeline-item .content{
+    background:#1f1f2a;
+}
+
+.timeline-item h4{
+    margin-bottom:3px;
+    color:#7b3fe4;
+}
+
+.timeline-item small{
+    opacity:0.7;
+}
+
+/* ================= PROJECTS ================= */
+.projects{
+    display:flex;
+    flex-direction:column;
+    align-items:center; /* 🔥 CENTER ALL */
+    gap:25px;
+    margin-top:15px;
+}
+
+.project-card{
+    background:#fff;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+
+    width:100%;
+    max-width:500px;
+
+    text-align:center; /* 🔥 CENTER */
+
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+body.dark .project-card{
+    background:#1a1a22;
+}
+
+/* IMAGES CENTER FIX */
+.project-images{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+}
+
+.project-images img{
+    width:160px;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.project-images img:hover{
+    transform:scale(1.05);
+}
+
+/* TEXT */
+.project-card h4{
+    color:#7b3fe4;
+    margin-bottom:5px;
+}
+
+.project-card p{
+    font-size:14px;
+    color:#555;
+}
+
+body.dark .project-card p{
+    color:#bbb;
+}

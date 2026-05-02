@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<button id="themeToggle">
+    <i class="fa-solid fa-moon"></i>
+</button>
+
+<div class="container">
+
+    <div class="profile">
+        <img src="A.jfif">
+        <h1>Ana Mira Carandang</h1>
+        <p>BS Computer Engineering</p>
+    </div>
+
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <section id="home" class="card">
+        <h2>Welcome</h2>
+        <p>Welcome to my personal Webpage</p> 
+
+   <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>A BS Computer Engineering at University of Batangas, and I like to explore and try different things.</p>
+
+    <h3>Education</h3>
+
+<div class="timeline">
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <div class="content">
+            <h4>Elementary</h4>
+            <p>Sto. Tomas North Central School</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <div class="content">
+            <h4>High School</h4>
+            <p>San Pedro National High School</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <div class="content">
+            <h4>Senior High School</h4>
+            <p>Tanauan Institute</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <div class="content">
+            <h4>College</h4>
+            <p>University of Batangas Lipa Campus</p>
+            <small>BS Computer Engineering</small>
+        </div>
+    </div>
+<h3>Projects</h3>
+
+<div class="projects">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+        <div class="project-images">
+            <img src="W1.webp">
+            <img src="W2.webp">
+        </div>
+
+        <h4>Water Level Indicator</h4>
+        <p>
+            A simple electronic system that detects water levels (low, high, very high)
+            using sensors and LED indicators. It also includes a buzzer alert for high water level.
+        </p>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+        <div class="project-images">
+            <img src="SC.jpeg">
+            <img src="SC2.jpeg">
+        </div>
+
+        <h4>7-Segment Display System</h4>
+        <p>
+            A digital display project using a 7-segment module connected through a breadboard circuit.
+            It demonstrates number output using electronic logic and wiring techniques.
+        </p>
+    </div>
+<div class="project-card">
+    <div class="project-images">
+        <img src="24SC.webp">
+    </div>
+
+    <h4>24-Second Shot Clock System</h4>
+    <p>
+        A basketball shot clock system designed to display a 24-second countdown using a 7-segment display.
+        The circuit was built using breadboards, resistors, and logic connections to simulate real-time timing.
+        This project demonstrates digital counting, timing control, and practical electronics implementation.
+    </p>
+</div>
+    </div>
+
+    <h3>Interests</h3>
+    <p>Coding, Networking, New Technologies</p>
+
+    <h3>Hobbies</h3>
+    <p>Reading,  Watching Movies</p>
+</section>
+    </section>
+
+    <section id="skills" class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Networking</span>
+        </div>
+    </section>
+
+    <section id="contact" class="card">
+    <h2>Contact</h2>
+
+    <div class="socials">
+        <a href="https://www.facebook.com/ana.mira6" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://github.com/Miraaaeeee" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <!-- GMAIL -->
+        <a href="mailto:2320051@ub.edu.ph" class="email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
+</section>
+
+</div>
+
+<script>
+const toggle = document.getElementById("themeToggle");
+toggle.onclick = () => {
+    document.body.classList.toggle("dark");
+};
+</script>
+
+</body>
+</html>
